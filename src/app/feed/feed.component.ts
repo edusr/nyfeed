@@ -15,7 +15,7 @@ export class FeedComponent implements OnInit {
 
   articles: Docs[] = [];
   
-  constructor(private feedService: FeedService, private route: ActivatedRoute, public dialog: MatDialog) { }
+  constructor(private feedService: FeedService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getFeeds();
@@ -27,11 +27,4 @@ export class FeedComponent implements OnInit {
     });
   }
 
-  openDialog(doc: Docs): void {
-    const dialogRef = this.dialog.open(FeedDialogComponent, {
-      width: '500px',
-      data: doc
-    }
-    );
-  }
 }
