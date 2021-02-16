@@ -14,7 +14,7 @@ export class FeedCardComponent implements OnInit {
   web_url: "",
   lead_paragraph: "",
   headline: {main:""},
-  multimedia: []
+  multimedia: [{url:""}]
   };
 
 
