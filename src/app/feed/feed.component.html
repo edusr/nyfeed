@@ -1,18 +1,1 @@
-<mat-card *ngFor="let item of articles; let i = index" (click)="openDialog(item)">
-
-  <mat-card-content>
-
-    <div class="container" >
-      <div class="fixed">
-        <img class="imageClass" src="http://newyorktimes.com/{{ item.multimedia[0].url}}" />
-      </div>
-      <div class="fixed-item">
-        <H1>{{item.headline.main}}</H1>
-        <p>
-          {{item.lead_paragraph}}
-        </p>
-      </div>
-    </div>
-
-  </mat-card-content>
-</mat-card>
+<app-feed-card [item]="item" *ngFor="let item of articles; let i = index" > </app-feed-card>

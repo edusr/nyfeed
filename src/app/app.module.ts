@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FeedDialogComponent } from './components/feed-dialog/feed-dialog.component';
+import { FeedCardComponent } from './components/feed-card/feed-card.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FeedDialogComponent } from './components/feed-dialog/feed-dialog.compon
     AppComponent,
     FeedComponent,
     FeedDialogComponent,
+    FeedCardComponent,
       ],
   imports: [
     BrowserModule,
