@@ -1,4 +1,4 @@
-import { browser, logging } from 'protractor';
+import { browser, element,by, logging } from 'protractor';
 import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
@@ -8,9 +8,16 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should display a card with content', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('newyorktimes-feed app is running!');
+    expect(await page.getFeedCardText()).toContain(`Hear the Sound of a Seashell Horn Found in an Ancient French Cave`);
+  });
+
+  it('should display a modal', async () => {
+    await page.navigateTo();
+    page.getFeedCardClick();
+    await browser.sleep(1000);
+    expect(element(by.className('mat-dialog-container ng-tns-c39-1 ng-trigger ng-trigger-dialogContainer ng-star-inserted')).isDisplayed()).toBeTruthy;
   });
 
   afterEach(async () => {
