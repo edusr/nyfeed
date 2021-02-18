@@ -16,6 +16,6 @@ Execute `ng test` para executar os testes unitários via [Karma](https://karma-r
 
 ## Executando end-to-end testes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Execute `ng e2e` para executar os teste e2e via [Protractor](http://www.protractortest.org/).
 
 
